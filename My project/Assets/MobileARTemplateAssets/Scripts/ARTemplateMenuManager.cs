@@ -440,7 +440,8 @@ public class ARTemplateMenuManager : MonoBehaviour
         if (m_ObjectMenu.TryGetComponent<RectTransform>(out var menuRect))
             m_ObjectMenuOffset = new Vector2(0f, menuRect.anchoredPosition.y + menuRect.rect.height + 10f);
         else
-            m_ObjectMenuOffset = new Vector2(0f, 345f);
+            m_ObjectMenuOffset = new Vector2(0f, 34
+                );
     }
 
     void AdjustARDebugMenuPosition()

@@ -794,8 +794,7 @@ MonoBehaviour:
   _occlusionTechnique: 0
   _optimalOcclusionDistanceMode: 0
   _principalOccludee: {fileID: 0}
-  _requestedSuppressionChannels:
-  - sky
+  _requestedSuppressionChannels: []
   _useCustomMaterial: 0
   _customMaterial: {fileID: 0}
   _requestBypassOcclusionManagerUpdates: 0
@@ -803,7 +802,7 @@ MonoBehaviour:
   _meshManager: {fileID: 0}
   _requestPreferSmoothEdges: 0
   _requestOcclusionStabilizationEnabled: 0
-  _requestOcclusionSuppressionEnabled: 1
+  _requestOcclusionSuppressionEnabled: 0
 --- !u!114 &1573500583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -975,7 +974,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _materials: []
   _possibleObjectToPlace:
+  - {fileID: 100720, guid: 8252519d2c6fd014bb5f75765a8c4fda, type: 3}
   - {fileID: 193776, guid: edd34a89cfe571f4ca766dcca2459bbe, type: 3}
+  - {fileID: 132742, guid: a3e7850e56f7e2d4a8cb9e150f10c835, type: 3}
+  - {fileID: 168864, guid: 281a986484325de459dc1b3709335bc5, type: 3}
   _latlongs:
   - latitude: 37.494799
     longitude: 127.02762
@@ -1241,7 +1243,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2089646356}
-  - component: {fileID: 2089646357}
   m_Layer: 0
   m_Name: zLog
   m_TagString: Untagged
@@ -1264,18 +1265,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2089646357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2089646355}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b135083c508d3d4d8aebb4d7036dc15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

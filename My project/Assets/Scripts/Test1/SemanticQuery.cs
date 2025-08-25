@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using Niantic.Lightship.AR.Semantics;
 using TMPro;
 using UnityEngine;
@@ -20,7 +20,6 @@ public class SemanticQuery : MonoBehaviour
     private string _channel = "ground";
 
     [SerializeField] private Transform spawnObjectParent;
-    public List<ChannelToObject> ChannelToObjects;
 
     private void OnEnable()
     {
@@ -102,17 +101,6 @@ public class SemanticQuery : MonoBehaviour
                 {
                     _channel = list[0];
                     _text.text = _channel;
-
-                    foreach (var channelToObject in ChannelToObjects)
-                    {
-                        if (channelToObject.channel == _channel)
-                        {
-                            Debug.Log($"The channel {_channel} has been detected and will spawn an object!");
-                            GameObject newObject = Instantiate(channelToObject.GameObject, pos,
-                                Quaternion.identity, spawnObjectParent);
-                            Destroy(newObject, 3f);
-                        }
-                    }
                 }
                 else
                 {
@@ -123,11 +111,4 @@ public class SemanticQuery : MonoBehaviour
             }
         }
     }
-}
-
-[System.Serializable]
-public struct ChannelToObject
-{
-    public string channel;
-    public GameObject GameObject;
 }

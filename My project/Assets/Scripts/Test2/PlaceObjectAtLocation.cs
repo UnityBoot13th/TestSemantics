@@ -21,7 +21,8 @@ public class PlaceObjectAtLocation : MonoBehaviour
     private void SpawnOnClick()
     {
         Transform camerTransform = _cameraManager.GetComponent<Transform>();
-        (double latOffsetCam, double longOffsetCam) = GetGeographicOffsetFromCameraPosition(camerTransform.position);
+
+        (double latOffsetCam, double longOffsetCam) = GetGeographicOffsetFromCameraPosition(camerTransform.forward);
 
         double latitude = _positioningManager.WorldTransform.OriginLatitude + latOffsetCam;
         double longitutde = _positioningManager.WorldTransform.OriginLongitude + longOffsetCam;
